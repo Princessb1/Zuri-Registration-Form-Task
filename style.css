@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,108 +6,128 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-}
-.form {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  background-image: url(./bg-intro-desktop.png);
-  background-repeat: no-repeat;
+  background: url(./bg-intro-desktop.png);
   background-color: hsl(0, 100%, 74%);
-  padding: 10px;
-  width: 100%;
-  margin: 30px auto;
-  max-width: 1440px;
 }
-.content {
-  color: white;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin: auto 30px;
-}
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-p {
-  line-height: 150%;
-}
-.form-container {
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.input {
-  position: relative;
+.writeup {
+  width: 50%;
+}
+.heading {
+  font-size: 25px;
+  width: 60%;
+  color: hsl(0, 0%, 100%);
+}
+.writeup-text {
+  margin-top: 20px;
+  font-size: 15px;
+  width: 60%;
+  color: hsl(0, 0%, 100%);
+}
+.box {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 100%;
-  margin: 10%;
-  margin-top: auto;
-  background-color: #fff;
-  padding: 2em 2em;
-  border-radius: 6px;
-  box-shadow: 0px 6px #0000005b;
-}
-.text {
-  text-align: center;
-  width: 80%;
-  margin: 10% auto 5%;
-  background-color: hsl(248, 32%, 49%);
-  padding: 15px;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  box-shadow: 0px 6px #0000005b;
-}
-span {
-  color: rgb(237, 230, 230);
-}
-input {
-  height: 25px;
-  padding: 4% 5%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 0.3em;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type="submit"] {
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: bold;
-  cursor: pointer;
-  background: hsl(154, 59%, 51%);
-  font-size: 11px;
-  box-shadow: 0px 2px hsl(153, 77%, 52%);
-}
-.text2 {
+#box1 {
+  background-color: hsl(248, 32%, 49%);
   color: hsl(246, 25%, 77%);
-  font-size: 13px;
-  margin: 7px auto;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-a {
+#box1 p {
+  color: white;
+}
+.light-text {
+  font-size: 15px;
+  color: hsl(246, 25%, 77%);
+}
+.box2 {
+  height: 350px;
+  width: 385px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 30px 0 0 25px;
+}
+.registration-form input {
+  height: 40px;
+  width: 90%;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding-left: 15px;
+  margin-bottom: 15px;
+  outline: none;
+}
+input:hover {
+  border: 1px solid hsl(248, 32%, 49%);
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  height: 35px;
+  width: 90%;
+  margin-right: 18px;
+  background-color: hsl(154, 59%, 51%);
+  border: 2px solid hsl(154, 59%, 51%);
+  border-radius: 8px;
+}
+
+button a {
   text-decoration: none;
-  color: hsl(0, 100%, 74%);
-  font-weight: bold;
+  color: hsl(0, 0%, 100%);
 }
-input:invalid {
-  border-color: hsl(0, 100%, 74%);
-  background-image: url(./icon-error.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-position-x: 95%;
+
+.registration-form p {
+  color: hsl(246, 25%, 77%);
+  margin-top: 15px;
+  font-size: 11px;
 }
-.error-message {
+.Terms {
   color: hsl(0, 100%, 74%);
-  position: relative;
-  left: 49%;
-  font-size: 10px;
-  /* width: fit-content; */
+  font-weight: 600;
+  font-size: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+  }
+  body {
+    background: url(./bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./bg-intro-mobile.png);
+    background-repeat: no-repeat;
+  }
 }
